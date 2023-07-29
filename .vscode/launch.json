@@ -1,0 +1,37 @@
+{
+  // Use IntelliSense to learn about possible attributes.
+  // Hover to view descriptions of existing attributes.
+  // For more information, visit: https://go.microsoft.com/fwlink/?linkid=830387
+  "version": "0.2.0",
+  "configurations": [
+    {
+      "name": "Python: Debug app.py",
+      "type": "python",
+      "request": "launch",
+      "program": "./vsimsearch/app.py",
+      "console": "integratedTerminal"
+    },
+    {
+      "name": "Python: Debug baseline app.py",
+      "type": "python",
+      "request": "launch",
+      "program": "./vsimsearch/baseline_app.py",
+      "console": "integratedTerminal"
+    },
+    {
+      "name": "Python: Debug matching test",
+      "type": "python",
+      "request": "launch",
+      "program": "./test/matching_result_test.py",
+      "console": "integratedTerminal"
+    },
+    {
+      "name": "debug special case 1",
+      "type": "python",
+      "request": "launch",
+      "program": "./debug/entry1.py",
+      "args": ["baseline"],
+      "console": "integratedTerminal"
+    }
+  ]
+}

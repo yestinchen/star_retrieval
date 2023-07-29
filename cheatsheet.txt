@@ -1,0 +1,32 @@
+# How to use
+
+## build index
+
+python vsimsearch/apps/index_app.py \
+  --file_path ./data/faster_rcnn-tracktor-person.txt \
+  --frame_height 1080 \
+  --frame_width 1920 \
+  --index_type 1 \
+  --output_path ../storage/results/vsim/test/test_save.pkl \
+  --discretize_func 1 --df_param1 1 --df_param2 1 \
+  --single_type True
+
+## build pattern
+
+python vsimsearch/apps/pattern_app.py \
+  --file_path ./data/faster_rcnn-tracktor-person.txt \
+  --frame_height 1080 \
+  --frame_width 1920 \
+  --output_path ../storage/results/vsim/test/test_pattern_save.pkl \
+  --discretize_func 1 --df_param1 1 --df_param2 1 \
+  --single_type True \
+  --ids 1,2,3 --frames 1,10
+
+## query
+
+python vsimsearch/apps/query_app.py \
+  --index_path ../storage/results/vsim/test_save.pkl \
+  --pattern_path ../storage/results/vsim/test_pattern_save.pkl \
+  --k 1 \
+  --index_type 1 \
+  --method baseline 
